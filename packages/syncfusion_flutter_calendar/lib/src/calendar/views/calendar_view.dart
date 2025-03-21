@@ -2382,19 +2382,19 @@ class _CustomCalendarScrollViewState extends State<CustomCalendarScrollView>
       return;
     }
     final _CalendarViewState viewKey = _getCurrentViewByVisibleDates()!;
-    if (viewKey._hoveringAppointmentView != null &&
-        !widget.isMobilePlatform &&
-        isNeedDragAndDrop) {
-      _handleAppointmentDragStart(
-          viewKey._hoveringAppointmentView!.clone(),
-          isTimelineView,
-          Offset(details.localPosition.dx - widget.width,
-              details.localPosition.dy),
-          isResourceEnabled,
-          viewHeaderHeight,
-          timeLabelWidth);
-      return;
-    }
+    // if (viewKey._hoveringAppointmentView != null &&
+    //     !widget.isMobilePlatform &&
+    //     isNeedDragAndDrop) {
+    //   _handleAppointmentDragStart(
+    //       viewKey._hoveringAppointmentView!.clone(),
+    //       isTimelineView,
+    //       Offset(details.localPosition.dx - widget.width,
+    //           details.localPosition.dy),
+    //       isResourceEnabled,
+    //       viewHeaderHeight,
+    //       timeLabelWidth);
+    //   return;
+    // }
     _timelineScrollStartPosition = viewKey._scrollController!.position.pixels;
     _timelineStartPosition = details.globalPosition.dx;
     _isNeedTimelineScrollEnd = false;
@@ -4954,20 +4954,20 @@ class _CustomCalendarScrollViewState extends State<CustomCalendarScrollView>
       double timeLabelWidth,
       bool isNeedDragAndDrop) {
     final _CalendarViewState currentState = _getCurrentViewByVisibleDates()!;
-    if (currentState._hoveringAppointmentView != null &&
-        currentState._hoveringAppointmentView!.appointment != null &&
-        !widget.isMobilePlatform &&
-        isNeedDragAndDrop) {
-      _handleAppointmentDragStart(
-          currentState._hoveringAppointmentView!.clone(),
-          isTimelineView,
-          Offset(dragStartDetails.localPosition.dx - widget.width,
-              dragStartDetails.localPosition.dy),
-          isResourceEnabled,
-          viewHeaderHeight,
-          timeLabelWidth);
-      return;
-    }
+    // if (currentState._hoveringAppointmentView != null &&
+    //     currentState._hoveringAppointmentView!.appointment != null &&
+    //     !widget.isMobilePlatform &&
+    //     isNeedDragAndDrop) {
+    //   _handleAppointmentDragStart(
+    //       currentState._hoveringAppointmentView!.clone(),
+    //       isTimelineView,
+    //       Offset(dragStartDetails.localPosition.dx - widget.width,
+    //           dragStartDetails.localPosition.dy),
+    //       isResourceEnabled,
+    //       viewHeaderHeight,
+    //       timeLabelWidth);
+    //   return;
+    // }
     switch (widget.calendar.viewNavigationMode) {
       case ViewNavigationMode.none:
         return;
@@ -5218,20 +5218,20 @@ class _CustomCalendarScrollViewState extends State<CustomCalendarScrollView>
       double timeLabelWidth,
       bool isNeedDragAndDrop) {
     final _CalendarViewState currentState = _getCurrentViewByVisibleDates()!;
-    if (currentState._hoveringAppointmentView != null &&
-        currentState._hoveringAppointmentView!.appointment != null &&
-        !widget.isMobilePlatform &&
-        isNeedDragAndDrop) {
-      _handleAppointmentDragStart(
-          currentState._hoveringAppointmentView!.clone(),
-          isTimelineView,
-          Offset(dragStartDetails.localPosition.dx,
-              dragStartDetails.localPosition.dy - widget.height),
-          isResourceEnabled,
-          viewHeaderHeight,
-          timeLabelWidth);
-      return;
-    }
+    // if (currentState._hoveringAppointmentView != null &&
+    //     currentState._hoveringAppointmentView!.appointment != null &&
+    //     !widget.isMobilePlatform &&
+    //     isNeedDragAndDrop) {
+    //   _handleAppointmentDragStart(
+    //       currentState._hoveringAppointmentView!.clone(),
+    //       isTimelineView,
+    //       Offset(dragStartDetails.localPosition.dx,
+    //           dragStartDetails.localPosition.dy - widget.height),
+    //       isResourceEnabled,
+    //       viewHeaderHeight,
+    //       timeLabelWidth);
+    //   return;
+    // }
     switch (widget.calendar.viewNavigationMode) {
       case ViewNavigationMode.none:
         return;
@@ -6705,7 +6705,7 @@ class _CalendarViewState extends State<_CalendarView>
         ? _resizingDetails.value.appointmentView!.appointment!.actualStartTime
         : _resizingDetails.value.appointmentView!.appointment!.actualEndTime;
     _resizingDetails.value.scrollPosition = null;
-    if (widget.calendar.appointmentBuilder == null) {
+    if (widget.calendar.appointmentBuilder == null || appointmentView?.appointment?.color != null) {
       _resizingDetails.value.appointmentColor =
           appointmentView!.appointment!.color;
     }

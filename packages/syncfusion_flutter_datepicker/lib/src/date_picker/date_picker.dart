@@ -8031,7 +8031,7 @@ class _PickerHeaderViewState extends State<_PickerHeaderView> {
     }
 
     Color arrowColor = widget.datePickerTheme.headerTextStyle!.color!;
-    arrowColor = arrowColor.withOpacity( arrowColor.a * 0.6);
+    arrowColor = arrowColor.withOpacity( arrowColor.opacity * 0.6);
     Color prevArrowColor = arrowColor;
     Color nextArrowColor = arrowColor;
     final List<dynamic> dates = widget.visibleDates.value;
@@ -8043,7 +8043,7 @@ class _PickerHeaderViewState extends State<_PickerHeaderView> {
             dates,
             widget.enableMultiView,
             widget.isHijri)) {
-      nextArrowColor = nextArrowColor.withOpacity( arrowColor.a * 0.5);
+      nextArrowColor = nextArrowColor.withOpacity( arrowColor.opacity * 0.5);
     }
 
     if (showNavigationArrow &&
@@ -8054,7 +8054,7 @@ class _PickerHeaderViewState extends State<_PickerHeaderView> {
             dates,
             widget.enableMultiView,
             widget.isHijri)) {
-      prevArrowColor = prevArrowColor.withOpacity( arrowColor.a * 0.5);
+      prevArrowColor = prevArrowColor.withOpacity( arrowColor.opacity * 0.5);
     }
 
     final Widget headerText = _getHeaderText(headerWidth, isMobilePlatform);

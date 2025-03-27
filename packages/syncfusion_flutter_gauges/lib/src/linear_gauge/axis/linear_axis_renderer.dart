@@ -1343,7 +1343,7 @@ class RenderLinearAxis extends RenderBox {
     }
 
     _axisPaint.color =
-        paintColor.withOpacity( animationValue * paintColor.a);
+        paintColor.withOpacity( animationValue * paintColor.opacity);
   }
 
   ///Draws minor tick elements.
@@ -1411,7 +1411,7 @@ class RenderLinearAxis extends RenderBox {
     }
 
     if (color != null) {
-      color = color.withOpacity( animationValue * color.a);
+      color = color.withOpacity( animationValue * color.opacity);
     }
 
     return dart_ui.TextStyle(

@@ -8,9 +8,9 @@ Color _saturatedColor(Color color, double factor) {
     const Color mix = Color(0x4D000000);
     final double mixFactor = 1 - factor;
     return Color.fromRGBO(
-      (mixFactor * (color.r * 255) + factor * (mix.r * 255)).toInt(),
-      (mixFactor * (color.g * 255) + factor * (mix.g * 255)).toInt(),
-      (mixFactor * (color.b * 255) + factor * (mix.b * 255)).toInt(),
+      (mixFactor * (color.red * 255) + factor * (mix.red * 255)).toInt(),
+      (mixFactor * (color.green * 255) + factor * (mix.green * 255)).toInt(),
+      (mixFactor * (color.blue * 255) + factor * (mix.blue * 255)).toInt(),
       1,
     );
   }

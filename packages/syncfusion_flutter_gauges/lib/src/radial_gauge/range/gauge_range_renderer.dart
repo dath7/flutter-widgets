@@ -633,7 +633,7 @@ class RenderGaugeRange extends RenderBox {
       ..style = isFill ? PaintingStyle.fill : PaintingStyle.stroke
       ..strokeWidth = strokeWidth
       ..color = color ?? _gaugeThemeData.rangeColor ?? const Color(0xFFF67280);
-    final double actualOpacity = paint.color.a;
+    final double actualOpacity = paint.color.opacity;
     paint.color = paint.color.withOpacity( opacity * actualOpacity);
     if (gradient != null && gradient!.colors.isNotEmpty) {
       List<Color> colors = gradient!.colors;
@@ -697,7 +697,7 @@ class RenderGaugeRange extends RenderBox {
     final Color rangeColor =
         color ?? _gaugeThemeData.rangeColor ?? const Color(0xFFF67280);
     final Color labelColor = labelStyle.color ?? getSaturationColor(rangeColor);
-    final double actualOpacity = labelColor.a;
+    final double actualOpacity = labelColor.opacity;
     final TextSpan span = TextSpan(
         text: label,
         style: TextStyle(

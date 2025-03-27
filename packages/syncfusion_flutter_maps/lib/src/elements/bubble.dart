@@ -269,7 +269,7 @@ class RenderMapBubble extends ShapeLayerChildRenderBoxBase {
   }
 
   void _updateHoverItemTween() {
-    final double opacity = _bubbleAnimation.value * _bubbleSettings.color!.a;
+    final double opacity = _bubbleAnimation.value * _bubbleSettings.color!.opacity;
     final Color defaultColor = bubbleSettings.color!.withOpacity( opacity);
     if (_currentHoverItem != null) {
       _forwardBubbleHoverColorTween.begin =
@@ -415,7 +415,7 @@ class RenderMapBubble extends ShapeLayerChildRenderBoxBase {
       ..clipRect(bounds);
     controller!.applyTransform(context, offset);
 
-    final double opacity = _bubbleAnimation.value * _bubbleSettings.color!.a;
+    final double opacity = _bubbleAnimation.value * _bubbleSettings.color!.opacity;
     final Color defaultColor = bubbleSettings.color!.withOpacity( opacity);
     final bool hasToggledIndices = controller!.toggledIndices.isNotEmpty;
     final Paint fillPaint = Paint()..isAntiAlias = true;

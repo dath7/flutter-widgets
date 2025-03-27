@@ -28,7 +28,7 @@ class SfColorScheme {
     required this.palettes,
   }) {
     this.primary = MaterialColor(
-      primary.toInt32,
+      primary.value,
       <int, Color>{
         1: primary,
         26: primary.withOpacity( 0.1),
@@ -53,7 +53,7 @@ class SfColorScheme {
     );
 
     this.onPrimary = MaterialColor(
-      onPrimary.toInt32,
+      onPrimary.value,
       <int, Color>{
         74: onPrimary.withOpacity( 0.29),
         75: brightness == Brightness.light
@@ -65,7 +65,7 @@ class SfColorScheme {
     );
 
     this.primaryContainer = MaterialColor(
-      primaryContainer.toInt32,
+      primaryContainer.value,
       <int, Color>{
         20: brightness == Brightness.light
             ? Colors.black.withOpacity( 0.08)
@@ -74,7 +74,7 @@ class SfColorScheme {
     );
 
     this.secondaryContainer = MaterialColor(
-      secondaryContainer.toInt32,
+      secondaryContainer.value,
       <int, Color>{
         204: secondaryContainer.withOpacity( 0.8),
         205: secondaryContainer.withOpacity( 0.8),
@@ -82,7 +82,7 @@ class SfColorScheme {
     );
 
     this.surface = MaterialColor(
-      surface.toInt32,
+      surface.value,
       <int, Color>{
         0: surface.withOpacity( 0.0001),
         31: surface.withOpacity( 0.12),
@@ -99,7 +99,7 @@ class SfColorScheme {
     );
 
     this.onSurface = MaterialColor(
-      onSurface.toInt32,
+      onSurface.value,
       <int, Color>{
         0: onSurface.withOpacity( 0.001),
         10: onSurface.withOpacity( 0.04),
@@ -181,7 +181,7 @@ class SfColorScheme {
     );
 
     this.surfaceVariant = MaterialColor(
-      surfaceVariant.toInt32,
+      surfaceVariant.value,
       <int, Color>{
         219: brightness == Brightness.light
             ? const Color.fromRGBO(219, 219, 219, 1)
@@ -190,7 +190,7 @@ class SfColorScheme {
     );
 
     this.onSurfaceVariant = MaterialColor(
-      onSurfaceVariant.toInt32,
+      onSurfaceVariant.value,
       <int, Color>{
         97: onSurfaceVariant.withOpacity( 0.38),
         138: brightness == Brightness.light
@@ -221,7 +221,7 @@ class SfColorScheme {
     );
 
     this.inverseSurface = MaterialColor(
-      inverseSurface.toInt32,
+      inverseSurface.value,
       <int, Color>{
         255: brightness == Brightness.light
             ? const Color(0xFFFAFAFA)
@@ -237,7 +237,7 @@ class SfColorScheme {
     );
 
     this.onInverseSurface = MaterialColor(
-      onInverseSurface.toInt32,
+      onInverseSurface.value,
       <int, Color>{
         150: brightness == Brightness.light
             ? const Color.fromRGBO(255, 255, 255, 1)
@@ -250,7 +250,7 @@ class SfColorScheme {
     );
 
     this.outlineVariant = MaterialColor(
-      outlineVariant.toInt32,
+      outlineVariant.value,
       <int, Color>{
         41: brightness == Brightness.light
             ? Colors.black.withOpacity( 0.16)
@@ -268,7 +268,7 @@ class SfColorScheme {
     );
 
     this.transparent = MaterialColor(
-      transparent.toInt32,
+      transparent.value,
       <int, Color>{
         0: transparent.withOpacity( 0.0001),
         20: transparent,
@@ -277,7 +277,7 @@ class SfColorScheme {
     );
 
     scrim = MaterialColor(
-      onSurface.toInt32,
+      onSurface.value,
       <int, Color>{
         82: brightness == Brightness.light
             ? Colors.white.withOpacity( 0.75)
@@ -312,7 +312,7 @@ class SfColorScheme {
     required this.palettes,
   }) {
     this.primary = MaterialColor(
-      primary.toInt32,
+      primary.value,
       <int, Color>{
         1: primaryContainer,
         27: brightness == Brightness.light
@@ -329,7 +329,7 @@ class SfColorScheme {
     );
 
     this.onPrimary = MaterialColor(
-      onPrimary.toInt32,
+      onPrimary.value,
       <int, Color>{
         31: onSurfaceVariant.withOpacity( 0.38),
         75: outlineVariant,
@@ -338,14 +338,14 @@ class SfColorScheme {
     );
 
     this.primaryContainer = MaterialColor(
-      primaryContainer.toInt32,
+      primaryContainer.value,
       <int, Color>{
         20: primaryContainer,
       },
     );
 
     this.secondaryContainer = MaterialColor(
-      secondaryContainer.toInt32,
+      secondaryContainer.value,
       <int, Color>{
         204: secondaryContainer.withOpacity( 0.8),
         205: surfaceVariant,
@@ -353,7 +353,7 @@ class SfColorScheme {
     );
 
     this.surface = MaterialColor(
-      surface.toInt32,
+      surface.value,
       <int, Color>{
         0: surface.withOpacity( 0.0001),
         31: surface.withOpacity( 0.12),
@@ -369,7 +369,7 @@ class SfColorScheme {
     );
 
     this.onSurface = MaterialColor(
-      onSurface.toInt32,
+      onSurface.value,
       <int, Color>{
         0: brightness == Brightness.light
             ? const Color(0xFFEEE8F4)
@@ -418,14 +418,14 @@ class SfColorScheme {
     );
 
     this.surfaceVariant = MaterialColor(
-      surfaceVariant.toInt32,
+      surfaceVariant.value,
       <int, Color>{
         219: surfaceVariant,
       },
     );
 
     this.onSurfaceVariant = MaterialColor(
-      onSurfaceVariant.toInt32,
+      onSurfaceVariant.value,
       <int, Color>{
         138: onSurfaceVariant,
         153: onSurfaceVariant,
@@ -439,7 +439,7 @@ class SfColorScheme {
     );
 
     this.inverseSurface = MaterialColor(
-      inverseSurface.toInt32,
+      inverseSurface.value,
       <int, Color>{
         255: inverseSurface,
         257: inverseSurface,
@@ -449,7 +449,7 @@ class SfColorScheme {
     );
 
     this.onInverseSurface = MaterialColor(
-      onInverseSurface.toInt32,
+      onInverseSurface.value,
       <int, Color>{
         150: onInverseSurface,
         255: onInverseSurface,
@@ -458,7 +458,7 @@ class SfColorScheme {
     );
 
     this.outlineVariant = MaterialColor(
-      outlineVariant.toInt32,
+      outlineVariant.value,
       <int, Color>{
         41: outlineVariant,
         255: outlineVariant,
@@ -468,7 +468,7 @@ class SfColorScheme {
     );
 
     this.transparent = MaterialColor(
-      transparent.toInt32,
+      transparent.value,
       <int, Color>{
         0: transparent.withOpacity( 0.0001),
         20: primary.withOpacity( 0.08),
@@ -477,7 +477,7 @@ class SfColorScheme {
     );
 
     this.scrim = MaterialColor(
-      onSurface.toInt32,
+      onSurface.value,
       <int, Color>{
         82: scrim.withOpacity( 0.32),
       },
@@ -549,21 +549,4 @@ class SfColorScheme {
 
   /// A list of colors that can be used to paint the components.
   List<Color> palettes;
-}
-
-/// The value property in the color class is deprecated in Flutter 3.27.0
-/// version. An alternate property for value is not provided in the framework.
-/// Therefore, we have explicitly implemented the functionality of value and
-/// used it in the source. This logic was taken from the framework 3.24 channel.
-extension _ColorExtension on Color {
-  static int _floatToInt8(double x) {
-    return (x * 255.0).round() & 0xff;
-  }
-
-  int get toInt32 {
-    return _floatToInt8(a) << 24 |
-        _floatToInt8(r) << 16 |
-        _floatToInt8(g) << 8 |
-        _floatToInt8(b) << 0;
-  }
 }

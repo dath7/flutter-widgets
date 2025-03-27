@@ -2345,7 +2345,7 @@ class _BreadcrumbsState extends State<_Breadcrumbs>
       _breadcrumbs.add(widget.settings.builder(context, _current, true));
     }
     final Color dividerColor =
-        Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.54);
+        Theme.of(context).colorScheme.onSurface.withOpacity( 0.54);
     final Widget divider = widget.settings.divider ??
         Icon(Icons.chevron_right, size: 16.0, color: dividerColor);
 

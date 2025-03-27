@@ -634,7 +634,7 @@ class RenderGaugeRange extends RenderBox {
       ..strokeWidth = strokeWidth
       ..color = color ?? _gaugeThemeData.rangeColor ?? const Color(0xFFF67280);
     final double actualOpacity = paint.color.a;
-    paint.color = paint.color.withValues(alpha: opacity * actualOpacity);
+    paint.color = paint.color.withOpacity( opacity * actualOpacity);
     if (gradient != null && gradient!.colors.isNotEmpty) {
       List<Color> colors = gradient!.colors;
       if (axisRenderer!.isInversed) {
@@ -701,7 +701,7 @@ class RenderGaugeRange extends RenderBox {
     final TextSpan span = TextSpan(
         text: label,
         style: TextStyle(
-            color: labelColor.withValues(alpha: actualOpacity * opacity),
+            color: labelColor.withOpacity( actualOpacity * opacity),
             fontSize: labelStyle.fontSize,
             fontFamily: labelStyle.fontFamily,
             fontStyle: labelStyle.fontStyle,

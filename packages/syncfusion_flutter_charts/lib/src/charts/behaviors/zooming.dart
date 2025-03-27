@@ -1113,7 +1113,7 @@ class ZoomPanBehavior extends ChartBehavior {
       if (fillColor != null &&
           fillColor != Colors.transparent &&
           fillColor.a == 1) {
-        fillColor = fillColor.withValues(alpha: 0.3);
+        fillColor = fillColor.withOpacity( 0.3);
       }
       final Paint fillPaint = Paint()
         ..color =

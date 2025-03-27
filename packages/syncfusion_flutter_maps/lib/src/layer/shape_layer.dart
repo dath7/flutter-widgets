@@ -1379,7 +1379,7 @@ class _GeoJSONLayerState extends State<GeoJSONLayer>
       legendTextStyle: themeData.textTheme.bodySmall!
           .copyWith(
               color:
-                  themeData.textTheme.bodySmall!.color!.withValues(alpha: 0.87))
+                  themeData.textTheme.bodySmall!.color!.withOpacity( 0.87))
           .merge(mapsThemeData.legendTextStyle)
           .merge(widget.legend?.textStyle),
       markerIconColor:
@@ -1574,8 +1574,8 @@ class _GeoJSONLayerState extends State<GeoJSONLayer>
           mapModel.legendMapperIndex = i;
           mapModel.colorValue = colorValue;
           if (mapper.minOpacity != null && mapper.maxOpacity != null) {
-            return mapper.color.withValues(
-                alpha: lerpDouble(mapper.minOpacity, mapper.maxOpacity,
+            return mapper.color.withOpacity(
+                lerpDouble(mapper.minOpacity, mapper.maxOpacity,
                     (colorValue - mapper.from!) / (mapper.to! - mapper.from!)));
           }
           return mapper.color;

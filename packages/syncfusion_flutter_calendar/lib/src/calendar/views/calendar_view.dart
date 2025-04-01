@@ -2098,6 +2098,10 @@ class _CustomCalendarScrollViewState extends State<CustomCalendarScrollView>
     DateTime updateStartTime = isAllDay
         ? DateTime(dropTime!.year, dropTime.month, dropTime.day)
         : dropTime!;
+    
+    if (widget.view == CalendarView.month && !isAllDay) {
+      updateStartTime = updateStartTime.copyWith(hour: appointment.startTime.hour, minute: appointment.startTime.minute);
+    }
 
     final Duration appointmentDuration = appointment.isAllDay &&
             widget.view != CalendarView.month &&
